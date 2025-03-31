@@ -16,5 +16,10 @@ namespace calculartoor
         {
             InitializeComponent();
         }
+
+        private void btnOne_Click(object sender, EventArgs e)
+        {
+            txtNumber.Text = txtNumber.Text + "1";
+        }
     }
 }
