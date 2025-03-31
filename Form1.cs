@@ -150,6 +150,12 @@ namespace calculartoor
             secondNumber = 0f;
             operators = -1;
         }
-
+        private void btnDot_Click(object sender, EventArgs e)
+        {
+            // 確認輸入文字框中完全沒有小數點
+            if (txtNumber.Text.IndexOf(".") == -1)
+                txtNumber.Text = txtNumber.Text + ".";
+        }
     }
+    
 }
