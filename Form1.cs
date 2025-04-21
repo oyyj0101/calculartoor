@@ -106,9 +106,10 @@ namespace calculartoor
         {
             Select_Operators(1);
         }
+        float finalResults = 0f; //宣告最後計算結果變數
         private void btnEqual_Click(object sender, EventArgs e)
         {
-            float finalResults = 0f; //宣告最後計算結果變數
+            
             secondNumber = Convert.ToSingle(txtNumber.Text); //將輸入文字框轉換成浮點數，存入第二個數字的全域變數
 
             //依照四則運算符號的選擇，進行加減乘除
@@ -134,6 +135,25 @@ namespace calculartoor
             firstNumber = 0f;
             secondNumber = 0f;
             operators = -1;
+        }
+
+        private void percentage_Click(object sender, EventArgs e)
+        {
+            float number = Convert.ToSingle(txtNumber.Text);
+            number = number / 100f;
+            txtNumber.Text = number.ToString();
+        }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            if (txtNumber.Text.Length >= 0)
+            {
+                txtNumber.Text = txtNumber.Text.Substring(0, txtNumber.Text.Length - 1);
+            }
+            else
+            {
+                txtNumber.Text = "0";
+            }
         }
         private void btnDot_Click(object sender, EventArgs e)
         {

@@ -46,6 +46,8 @@
             this.btnMinus = new System.Windows.Forms.Button();
             this.btnPlus = new System.Windows.Forms.Button();
             this.btnDivide = new System.Windows.Forms.Button();
+            this.percentage = new System.Windows.Forms.Button();
+            this.back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtNumber
@@ -225,11 +227,33 @@
             this.btnDivide.UseVisualStyleBackColor = true;
             this.btnDivide.Click += new System.EventHandler(this.btnDivide_Click);
             // 
+            // percentage
+            // 
+            this.percentage.Location = new System.Drawing.Point(30, 158);
+            this.percentage.Name = "percentage";
+            this.percentage.Size = new System.Drawing.Size(75, 23);
+            this.percentage.TabIndex = 18;
+            this.percentage.Text = "%";
+            this.percentage.UseVisualStyleBackColor = true;
+            this.percentage.Click += new System.EventHandler(this.percentage_Click);
+            // 
+            // back
+            // 
+            this.back.Location = new System.Drawing.Point(30, 100);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(75, 23);
+            this.back.TabIndex = 19;
+            this.back.Text = "<<";
+            this.back.UseVisualStyleBackColor = true;
+            this.back.Click += new System.EventHandler(this.back_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(715, 453);
+            this.Controls.Add(this.back);
+            this.Controls.Add(this.percentage);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnMinus);
             this.Controls.Add(this.btnPlus);
@@ -275,6 +299,8 @@
         private System.Windows.Forms.Button btnMinus;
         private System.Windows.Forms.Button btnPlus;
         private System.Windows.Forms.Button btnDivide;
+        private System.Windows.Forms.Button percentage;
+        private System.Windows.Forms.Button back;
     }
 }
 
